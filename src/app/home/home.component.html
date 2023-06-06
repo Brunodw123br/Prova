@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="Header">
+    <nav>
+      <ul>
+        <Li>
+          <a href="#">
+              <h1>
+                Controle de viagens
+              </h1>
+            </a>
+        </Li>
+        <Li>
+          <a href="#">
+              <h3>
+                Nova viagem
+              </h3>
+            </a>
+        </Li>
+      </ul>
+    </nav>
+  </div>
+  <div class="Section">
+    <div class="sla" *ngFor="let i of Viagens">
+      <h3>{{i.destino}}</h3>
+      <h3>{{i.tipo}}</h3>
+      <h3>{{i.dataC}}</h3>
+      <h3>{{i.dataS}}</h3>
+    </div>
+  </div>
+
+</div>

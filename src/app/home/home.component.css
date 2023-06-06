@@ -1,0 +1,21 @@
+
+.container{
+  background-color: bisque;
+  max-width: 1200px;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+}
+.Header ul li{
+  list-style: none;
+}
+.Header ul li a{
+  text-decoration: none;
+  color: black;
+}
+.sla{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+}
