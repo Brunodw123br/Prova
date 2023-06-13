@@ -1,0 +1,57 @@
+<div id="box">
+    <div class="container">
+        <div class="Header">
+          <nav>
+            <ul>
+              <Li>
+                <a routerLink="/">
+                    <p>
+                      Controle de viagens
+                    </p>
+                  </a>
+              </Li>
+              <Li>
+                <a routerLink="/Cadastro">
+                    <p id="mudar">
+                      Nova viagem
+                    </p>
+                  </a>
+              </Li>
+            </ul>
+          </nav>
+        </div>
+        <div id="pergunta"><p>Tem certeza que deseja excluir a viagem?</p></div>
+        <div class="Section">
+          <p id ="intro">Excluir viagem</p>
+          <div class="box">
+            <div class="separador">
+              <div class="showUm">
+                <div class="show"><h3>Destino</h3></div>
+                <div class="show"><h3>Tipo</h3></div>
+                <div class="show"><h3>Data Chegada</h3></div>
+                <div class="show"><h3>Data Saida</h3></div>
+                <div class="show"><h3>Orçamento</h3></div>
+                <div class="show"><h3>Qtd. Pessoa</h3></div>
+                <div class="botoes" style="background-color: #f7f7f5;">
+                    <button class="Detalhes" style="visibility: hidden; margin-top: 38px;">Detalhes</button>
+                    <button class="Excluir" style="visibility: hidden;">Excluir</button>
+                </div>
+              </div>
+              <div class="showDois">
+                <div class="show2"><h3>{{destino}}</h3></div>
+                <div class="show2"><h3>{{tipo}}</h3></div>
+                <div class="show2"><h3>{{dataC}}</h3></div>
+                <div class="show2"><h3>{{dataS}}</h3></div>
+                <div class="show2"><h3>{{orcamento}}</h3></div>
+                <div class="show2"><h3>{{qtd}}</h3></div>
+                <div class="botoes" style="background-color: #d0cfcf;">
+                    <button id="voltar" routerLink="/">voltar</button>
+                    <button id="confirmar">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="fortalecimento">sla</p>
+    </div>

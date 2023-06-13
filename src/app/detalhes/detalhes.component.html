@@ -1,0 +1,39 @@
+<div id="box">
+    <div class="container">
+        <div class="Header">
+          <nav>
+            <ul>
+              <Li>
+                <a routerLink="/">
+                    <p>
+                      Controle de viagens
+                    </p>
+                  </a>
+              </Li>
+              <Li>
+                <a routerLink="/Cadastro">
+                    <p id="mudar">
+                      Nova viagem
+                    </p>
+                  </a>
+              </Li>
+            </ul>
+          </nav>
+        </div>
+        <div class="Section">
+          <p id ="intro">Detalhes da viagem</p>
+          <div class="box">
+            <div>
+                <div class="containerRegistro"><label class="escrita">Destino</label><p class="inputers">{{destino}}</p></div>
+                <div class="containerRegistro"><label class="escrita">Tipo</label><p class="inputers">{{tipo}}</p></div>
+                <div class="containerRegistro"><label class="escrita">Data de chegada</label><p class="inputers">{{dataC}}</p></div>
+                <div class="containerRegistro"><label class="escrita">Data de saída</label><p class="inputers">{{dataS}}</p></div>
+                <div class="containerRegistro"><label class="escrita">Orçamento</label><p class="inputers">{{orcamento}}</p></div>
+                <div class="containerRegistro"><label class="escrita">Qtde. pessoa</label><p class="inputers">{{qtd}}</p></div>
+                <div id="botao"><button id="voltar" routerLink="/">voltar</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="fortalecimento">sla</p>
+    </div>

@@ -1,31 +1,62 @@
-<div class="container">
-  <div class="Header">
-    <nav>
-      <ul>
-        <Li>
-          <a href="#">
-              <h1>
-                Controle de viagens
-              </h1>
-            </a>
-        </Li>
-        <Li>
-          <a href="#">
-              <h3>
-                Nova viagem
-              </h3>
-            </a>
-        </Li>
-      </ul>
-    </nav>
-  </div>
-  <div class="Section">
-    <div class="sla" *ngFor="let i of Viagens">
-      <h3>{{i.destino}}</h3>
-      <h3>{{i.tipo}}</h3>
-      <h3>{{i.dataC}}</h3>
-      <h3>{{i.dataS}}</h3>
+<div id="box">
+  <div class="container">
+    <div class="Header">
+      <nav>
+        <ul>
+          <Li>
+            <a routerLink="/">
+                <p>
+                  Controle de viagens
+                </p>
+              </a>
+          </Li>
+          <Li>
+            <a routerLink="/Cadastro">
+                <p id="mudar">
+                  Nova viagem
+                </p>
+              </a>
+          </Li>
+        </ul>
+      </nav>
+    </div>
+    <div class="Section">
+      <p id ="intro">Minhas Viagens</p>
+      <div class="box">
+        <div class="show"><h3>Destino</h3></div>
+        <div class="show"><h3>Tipo</h3></div>
+        <div class="show"><h3>Data Chegada</h3></div>
+        <div class="show"><h3>Data Saida</h3></div>
+        <div class="botoes" style="background-color: #f7f7f5;">
+          <button class="Detalhes" style="visibility: hidden; margin-top: 30px;">Detalhes</button>
+          <button class="Excluir" style="visibility: hidden;">Excluir</button>
+        </div>
+      </div>
+      <div class="sla" *ngFor="let viagem of Viagens; let i = index">
+        <div class="padronizar" *ngIf="i % 2 === 0; else padrao">
+          <div class="impar"><h3>{{viagem.destino}}</h3></div>
+          <div class="impar"><h3>{{viagem.tipo}}</h3></div>
+          <div class="impar"><h3>{{viagem.dataC}}</h3></div>
+          <div class="impar"><h3>{{viagem.dataS}}</h3></div>
+          <div class="botoes">
+            <button class="Detalhes" (click)="clicadoDetalhe(viagem)">Detalhes</button>
+            <button class="Excluir" (click)="clicadoExcluir(viagem)">Excluir</button>
+          </div>
+        </div>
+        <ng-template #padrao> 
+          <div class="padronizarDois">
+            <div class="par"><h3>{{viagem.destino}}</h3></div>
+            <div class="par"><h3>{{viagem.tipo}}</h3></div>
+            <div class="par"><h3>{{viagem.dataC}}</h3></div>
+            <div class="par"><h3>{{viagem.dataS}}</h3></div>
+            <div class="botoes">
+              <button class="Detalhes" (click)="clicadoDetalhe(viagem)">Detalhes</button>
+              <button class="Excluir" (click)="clicadoExcluir(viagem)">Excluir</button>
+            </div>
+          </div>
+        </ng-template>
+      </div>
     </div>
   </div>
-
+  <p id="fortalecimento">sla</p>
 </div>
